@@ -1,1 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="title.png" />
+    <title>sepsupriatnaa</title>
+  </head>
+  <body>
+    <!-- contaner bg color -->
+    <div id="wadah1" class="bg-gray-100 min-h-screen min-w-screen">
+      <!-- navigasi -->
+      <nav
+        id="nav"
+        class="text-gray-800 flex justify-evenly sticky top-0 z-50 fade-nav"
+      >
+        <div id="wadah-title" class="text-2xl font-medium m-5">
+          <a href="#wadah1"><h1>Sepsupriatnaa</h1></a>
+        </div>
 
+        <div class="p-5 relative top-1">
+          <ul class="flex space-x-12">
+            <li class="hover:text-yellow-600">
+              <a href="#wadah1">Home</a>
+            </li>
+            <li class="hover:text-yellow-600"><a href="#wadah2">About</a></li>
+            <li class="hover:text-yellow-600"><a href="#wadah3">Skills</a></li>
+            <li class="hover:text-yellow-600"><a href="#wadah4">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <!-- hero -->
+      <section
+        id="perkenalan"
+        class="min-h-screen min-w-screen flex justify-evenly"
+      >
+        <h2 class="font-medium fade-in">
+          Hii, saya <br />
+          Asep Supriatna<br />
+          <span class="typing"></span>
+        </h2>
+
+        <img src="PP-Me.png" alt="gambar Asep Supriatna" class="fade-in" />
+      </section>
+
+      <!-- about -->
+      <div
+        id="wadah2"
+        class="bg-white min-h-screen min-w-screen flex flex-col items-center justify-center"
+      >
+        <div id="about" class="m-20 flex flex-col items-center">
+          <h2 class="text-4xl font-medium relative fade-in">About Me</h2>
+          <br />
+          <p class="fade-in">
+            Saya adalah seorang programer khususnya dalam bidang web <br />
+            saya menekuni bidang ini sudah sekitar 4 tahun, <br />
+            keahlian saya yang paling dikuasai adalah dalam <br />
+            pengembangan Frontend Web.
+          </p>
+        </div>
+      </div>
+
+      <!-- skills -->
+      <div
+        id="wadah3"
+        class="min-h-screen min-w-screen flex items-center justify-center"
+      >
+        <!-- <h2 class="text-3xl font-medium relative">Skills</h2> -->
+        <div
+          id="skills"
+          class="grid grid-cols-3 gap-y-10 gap-x-20 relative left-12"
+        >
+          <div class="fade-in">
+            <img src="html.png" alt="html logo" width="180px" height="5px" />
+          </div>
+
+          <div class="fade-in">
+            <img src="css.png" alt="css logo" width="180px" height="5px" />
+          </div>
+
+          <div class="relative top-2 fade-in">
+            <img src="js.png" alt="js logo" width="115px" height="4px" />
+          </div>
+
+          <div class="fade-in">
+            <img
+              src="tailwind.png"
+              alt="tailwind logo"
+              width="270px"
+              height="50px"
+              class="relative right-5"
+            />
+          </div>
+
+          <div class="relative top-14 left-3 fade-in">
+            <img src="react.png" alt="ract logo" width="160px" height="5px" />
+          </div>
+        </div>
+      </div>
+
+      <!-- contact -->
+      <div
+        id="wadah4"
+        class="bg-white text-3xl fade-in min-h-screen min-w-screen flex flex-col items-center justify-center"
+      >
+        <h2 class="text-6xl font-medium relative">Contact Us</h2>
+        <br />
+
+        <div
+          class="flex space-x-20 justify-center items-start relative left-12"
+        >
+          <a href="https://web.facebook.com/sep.c.speed" target="_blank">
+            <img src="facebook.png" alt="facebook" width="70px" height="5px" />
+          </a>
+          <a href="https://www.instagram.com/sepsupriatnaa/" target="_blank">
+            <img
+              src="instagram.png"
+              alt="instagran"
+              width="70px"
+              height="5px"
+            />
+          </a>
+          <a
+            href="https://api.whatsapp.com/send?phone=6285872256552&text=Hi,%20Admin.%0ASaya tertarik%20untuk%20membeli%20jasa%20Anda.%0ABoleh%20tanya-tanya%20dulu?"
+            target="_blank"
+          >
+            <img
+              src="whatsapp.png"
+              alt="whatsapp"
+              width="150px"
+              height="5px"
+              class="relative bottom-7 right-12"
+            />
+          </a>
+        </div>
+      </div>
+
+      <!-- footer -->
+      <div
+        id="footer"
+        class="bg-gray-600 text-white p-4 flex justify-center items-center"
+      >
+        <p>Asep Supriatna, Portofolio 2023 &copy</p>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script>
+      const mengetik = new Typed(".typing", {
+        strings: ["Frontend Web", "Develover"],
+        typeSpeed: 100,
+        backSpeed: 50,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
