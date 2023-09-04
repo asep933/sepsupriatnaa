@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0; /* Warna latar belakang umum */
+      }
+
+      .image-container {
+        position: relative;
+        margin: 20px;
+      }
+
+      .image-wrapper {
+        position: relative;
+      }
+
+      img {
+        display: block;
+      }
+
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(
+          0,
+          0,
+          0,
+          0.7
+        ); /* Latar belakang hitam dengan transparansi */
+        opacity: 0;
+        transition: opacity 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .popup-content {
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .image-container:hover .image-overlay {
+        opacity: 1;
+      }
+    </style>
+    <title>Image Pop-up</title>
+  </head>
+  <body>
+    <div class="image-container">
+      <div class="image-wrapper">
+        <img src="html.png" alt="html logo" width="180px" height="150px" />
+        <div class="image-overlay">
+          <div class="popup-content">
+            <!-- Isi Pop-up -->
+            <p>Ini adalah logo HTML.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tambahkan elemen lain di sini -->
+
+    <script>
+      const imageOverlay = document.querySelectorAll(".image-overlay");
+
+      document.addEventListener("click", (event) => {
+        if (!event.target.closest(".image-container")) {
+          imageOverlay.forEach((overlay) => {
+            overlay.style.opacity = 0;
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
